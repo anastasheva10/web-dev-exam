@@ -2,58 +2,8 @@ window.onload = function () {
     loadAll();
 };
 
-let allPrice = 0;
-let restor;
 let allRestor;
 let curretPage = 0;
-
-function addNewRest() {
-    let new_obj = {};
-
-    new_obj["name"] = document.getElementById('modal_name_4').value;
-    new_obj["operatingCompany"] = document.getElementById('modal_operatingCompany_4').value;
-    new_obj["socialDiscount"] = document.getElementById('modal_socialDiscount_4').value;
-    new_obj["seatsCount"] = Number(document.getElementById('modal_seatsCount_4').value);
-    new_obj["publicPhone"] = document.getElementById('modal_publicPhone_4').value;
-    new_obj["address"] = document.getElementById('modal_address_4').value;
-    new_obj["rate"] = Number(document.getElementById('modal_rate_4').value);
-    new_obj["admArea"] = document.getElementById('modal_admArea_4').value;
-    new_obj["district"] = document.getElementById('modal_district_4').value;
-    new_obj["typeObject"] = document.getElementById('modal_typeObject_4').value;
-
-    getRadio2('input[name="inlineRadioOptions4_1"]', 'isNetObject');
-    getRadio2('input[name="inlineRadioOptions4_2"]', 'socialPrivileges');
-
-
-    function getRadio2(inputRadioName, keyName) {
-        let radio = document.querySelectorAll(inputRadioName);
-        for (let i = 0; i < radio.length; i++) {
-            if (radio[i].checked) {
-
-                console.log(radio[i].value);
-                if (radio[i].value == "option1")
-                    new_obj[keyName] = 1;
-                else if (radio[i].value == "option2") {
-                    new_obj[keyName] = 0;
-                }
-            } else {
-                new_obj[keyName] = null;
-            }
-        }
-    }
-
-    fetch(`http://exam-2020-1-api.std-400.ist.mospolytech.ru/api/data1`, {
-        method: 'POST',
-        body: JSON.stringify(new_obj),
-        headers: {
-            "Content-type": "application/json; charset=UTF-8"
-        }
-    })
-        .then(response => response.json())
-        .then(json => console.log(json))
-
-
-}
 
 function loadAll() {
     let url = new URL('http://exam-2020-1-api.std-400.ist.mospolytech.ru/api/data1');
@@ -64,7 +14,7 @@ function loadAll() {
         .then(result => {
             curretPage = 0;
             allRestor = chunkArray(result.sort((a, b) => b.rate - a.rate), 18);
-            // loadOptions(result);
+            loadAdminOptions(result);
             createAdminCards(allRestor[curretPage], 'allRest')
             createAdminNavigation();
         });
@@ -74,7 +24,7 @@ function loadAdminOptions(data) {
     Array.from(new Set(data.map(area => area.admArea))).forEach(element => {
             let districtOption = document.createElement('option');
             districtOption.innerHTML = `${String(element)}`;
-            document.getElementById('inputAdm').append(districtOption);
+            document.getElementById('inputadmArea').append(districtOption);
         }
     );
     Array.from(new Set(data.map(area => area.district))).forEach(element => {
@@ -97,7 +47,7 @@ function createAdminCards(data, insertEl) {
 
     data.forEach(data => {
         let col = document.createElement('div');
-        col.className = 'col-md-2 card-group'
+        col.className = 'col-lg-3 col-md-4 col-sm-6 card-group'
 
         let card = document.createElement('div');
         card.className = 'card text-center m-2 bg-light shadow-sm';
@@ -129,7 +79,10 @@ function createAdminCards(data, insertEl) {
 
 
         let cardInfoBtn = document.createElement('a');
-        cardInfoBtn.innerHTML = `<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>`
+        cardInfoBtn.innerHTML = `<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+</svg>`;
         cardInfoBtn.className = 'btn btn-outline-info';
         cardFooter.append(cardInfoBtn);
         cardInfoBtn.onclick = function (event) {
@@ -137,7 +90,10 @@ function createAdminCards(data, insertEl) {
         };
 
         let cardEditBtn = document.createElement('a');
-        cardEditBtn.innerText = 'Изменить';
+        cardEditBtn.innerHTML = `<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+  <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+</svg>`;
         cardEditBtn.className = 'btn btn-outline-success';
         cardFooter.append(cardEditBtn);
         cardEditBtn.onclick = function (event) {
@@ -145,20 +101,26 @@ function createAdminCards(data, insertEl) {
         };
 
         let cardRemoveBtn = document.createElement('a');
-        cardRemoveBtn.innerText = 'Удалить';
+        cardRemoveBtn.innerHTML = `<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+  <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+</svg>`;
         cardRemoveBtn.className = 'btn btn-outline-warning';
         cardFooter.append(cardRemoveBtn);
         cardRemoveBtn.onclick = function (event) {
+            let isRemove = confirm("Вы уверены?");
+            if (isRemove) {
+                let url = new URL('http://exam-2020-1-api.std-400.ist.mospolytech.ru/api/data1/' + data.id);
 
-            let url = new URL('http://exam-2020-1-api.std-400.ist.mospolytech.ru/api/data1/' + data.id);
-
-            fetch(url, {
-                method: 'delete',
-            })
-                .then(response => response.json())
-                .then(result =>
-                    console.log(result)
-                );
+                fetch(url, {
+                    method: 'delete',
+                })
+                    .then(response => response.json())
+                    .then(result => {
+                        loadAll();
+                        alert("удалено");
+                    });
+            }
         };
 
 
@@ -168,10 +130,6 @@ function createAdminCards(data, insertEl) {
         col.append(card)
         allRest.append(col);
     });
-}
-
-function remove(id) {
-
 }
 
 function createAdminNavigation() {
@@ -261,34 +219,89 @@ function createPageLink(id) {
 }
 
 function findByFilter() {
-    let adm = document.getElementById('inputAdm').value;
+    let name = document.getElementById('inputName').value;
+    let adm = document.getElementById('inputadmArea').value;
+
+    let seatsCountFrom = document.getElementById('inputSeatsCountFrom').value;
+    let seatsCountTo = document.getElementById('inputSeatsCountTo').value;
+
+    let inputCreatedAtFrom = document.getElementById('inputCreatedAtFrom').value;
+    let inputCreatedAtTo = document.getElementById('inputCreatedAtTo').value;
+    // document.getElementById('inputCreatedAtFrom').value===''
+    let isNetObj = document.getElementById('inputIsNetObj').value;
+
     let dist = document.getElementById('inputDistrict').value;
     let type = document.getElementById('inputTypeObject').value;
-    let soc = document.getElementById('isSocial').checked;
+    let soc = document.getElementById('inputSocialPrivileges').value;
+
     let url = new URL('http://exam-2020-1-api.std-400.ist.mospolytech.ru/api/data1');
     fetch(url, {
         method: 'get',
     }).then(response => response.json())
         .then(result => {
             let filterRes = result.sort((a, b) => b.rate - a.rate);
+            if (name !== '') {
+                console.log(name);
+                console.log(filterRes);
+                filterRes = filterRes.filter(r => r.name.includes(name));
+            }
+            console.log('filterRes');
+            console.log(filterRes);
             if (adm !== 'любой') {
                 filterRes = filterRes.filter(r => r.admArea === adm);
             }
+
+            if (seatsCountFrom !== '') {
+                console.log('seatsCountFrom');
+                filterRes = filterRes.filter(r => r.seatsCount <= seatsCountFrom);
+            }
+            if (seatsCountTo !== '') {
+                console.log('seatsCountTo');
+                filterRes = filterRes.filter(r => r.seatsCount >= seatsCountTo);
+            }
+
+            if (inputCreatedAtFrom !== '') {
+                console.log('inputCreatedAtFrom');
+                filterRes = filterRes.filter(r => r.created_at <= inputCreatedAtFrom);
+            }
+            if (inputCreatedAtTo !== '') {
+                console.log('inputCreatedAtTo');
+                filterRes = filterRes.filter(r => r.created_at >= inputCreatedAtTo);
+            }
+
+
             if (dist !== 'любой') {
+                console.log('dist');
                 filterRes = filterRes.filter(r => r.district === dist);
             }
             if (type !== 'любой') {
+                console.log('type');
                 filterRes = filterRes.filter(r => r.typeObject === type);
             }
-            if (soc) {
-                filterRes = filterRes.filter(r => r.socialPrivileges === 1);
+
+            if (soc !== 'любой') {
+                console.log('soc');
+                if (soc === 'Да') {
+                    filterRes = filterRes.filter(r => r.socialPrivileges === 1);
+                } else {
+                    filterRes = filterRes.filter(r => r.socialPrivileges === 0);
+                }
+            }
+
+            if (isNetObj !== 'любой') {
+                console.log('isNetObj');
+                if (isNetObj === 'Да') {
+                    filterRes = filterRes.filter(r => r.isNetObject === 1);
+                } else {
+                    filterRes = filterRes.filter(r => r.isNetObject === 0);
+                }
             }
             console.log(filterRes);
             curretPage = 0;
             allRestor = chunkArray(filterRes, 12);
-            loadOptions(result);
-            createCards(allRestor[curretPage], 'allRest')
-            createNavigation(allRestor);
+            loadAdminOptions(result);
+            createAdminCards(allRestor[curretPage], 'allRest')
+            createAdminNavigation(allRestor);
         });
 }
 
@@ -304,5 +317,6 @@ function removeAllElementsInParentElement(element) {
     while (element.firstChild)
         element.removeChild(element.firstChild);
 }
+
 
 
