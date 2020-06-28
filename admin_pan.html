@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="C:\Users\Анастасия\Desktop\webdev-exam-2020-05166\bootstrap-4.5.0-dist\bootstrap-4.5.0-dist\css\bootstrap.min.css"  >
+    <link href="C:\Users\Анастасия\Desktop\webdev-exam-2020-05166\bootstrap-4.5.0-dist\bootstrap-4.5.0-dist\css\bootstrap.css" rel="stylesheet">
+     <!-- <link rel="stylesheet" href="\bootstrap-4.5.0-dist\bootstrap-4.5.0-dist\css\bootstrap.min.css">
+     <link href="\bootstrap-4.5.0-dist\bootstrap-4.5.0-dist\css\bootstrap.css" rel="stylesheet">-->
+    <link rel="stylesheet" href= "admin.css">
+    <script src="admin.js"></script>
+       <title>Admin</title>
+  </head>
+
+  <body>
+    <form class="form-inline mt-2 mt-md-0">
+        <a class="btn btn btn-outline-danger my-2 my-sm-0" style="margin:30px;" href="index.html" role="button">Back &raquo;</a>
+      </form>
+     <h1>Предприятия общественного питания города Москвы</h1>
+
+         <hr>
+     
+    <!--<div class="container-fluid">
+        <form>
+            <div class="form-row">
+              <div class="form-group col-md-7">
+                <label for="inputEmail4">Название предприятия</label>
+                <input type="email" class="form-control" id="inputEmail4">
+              </div>
+              <div class="form-group col-md-5">
+                <label for="inputAdm">Административный округ</label>
+                <select class="form-control form-control"> <option selected>Choose...</option></select>
+              </div>
+            </div>
+        
+              <div class="row mb-3">
+                <div class="col-md-5 themed-grid-col">
+                    <div class="pb-3">
+                        Количество посадочных мест
+                    </div>
+              <div class="row">
+                <div class="col-md-1 themed-grid-col">
+                    от
+                </div>
+                <div class="col-md-5 themed-grid-col">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="inputAddress2" >
+                    </div>	        
+              </div>
+              <div class="col-md-1 themed-grid-col">
+                  до
+              </div>
+              <div class="col-md-5 themed-grid-col">
+                  <div class="form-group">
+                      <input type="text" class="form-control" id="inputAddress2" >
+                    </div>	 
+              </div>
+              </div>
+            </div>
+              <div class="form-group col-md-3" style="margin:7px;">
+                <label for="inputAdm">Район</label>
+                <select class="form-control form-control"> <option selected>Choose...</option></select>
+              </div>
+              <div class="form-group col-md-3" style="margin:5px;" >
+                <label for="inputState">Тип заведения</label>
+                <select class="form-control form-control"> <option selected>Choose...</option></select>
+              </div>
+              </div>
+
+             
+             
+             
+              <div class="row mb-3">
+                <div class="col-md-5 themed-grid-col">
+                    <div class="pb-3">
+                        Дата создания
+                    </div>
+              <div class="row">
+                <div class="col-md-1 themed-grid-col">
+                    с
+                </div>
+                <div class="col-md-5 themed-grid-col">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="inputAddress2" >
+                    </div>	        
+              </div>
+              <div class="col-md-1 themed-grid-col">
+                  по
+              </div>
+              <div class="col-md-5 themed-grid-col">
+                  <div class="form-group">
+                      <input type="text" class="form-control" id="inputAddress2" >
+                    </div>	 
+              </div>
+              </div>
+            </div>
+              <div class="form-group col-md-3" style="margin:7px;">
+                <label for="inputAdm">Является сетевым</label>
+                <select class="form-control form-control"> 
+                    <option selected>Choose...</option>
+                    <option>Да</option>
+                    <option>Нет</option>
+                </select>
+              </div>
+              <div class="form-group col-md-3" style="margin:7px;">
+                <label for="inputState">Льготы</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>Да</option>
+                  <option>Нет</option>
+                </select>
+              </div>
+              </div>
+        
+            <button type="submit" class="btn btn-primary btn-lg btn-block" style="background:#4e0606;">Sign in</button>
+          </form>-->
+
+          <div class="container-fluid">
+    <form>
+        <div class="row mb-3">
+            <div class="col-md-8 themed-grid-col">
+                <div class="pb-3">
+                    Наименование
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <input type="text" class="form-control" id="inputName" placeholder="BurgerKing, KFC...">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 themed-grid-col">
+                <div class="pb-3">
+                    Административный округ
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <select class="form-control" id="inputadmArea">
+                            <option selected></option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-5 themed-grid-col">
+                <div class="pb-3">
+                    Количество посадочных мест
+                </div>
+                <div class="row">
+                    <div class="col-md-1 themed-grid-col">
+                        от
+                    </div>
+                    <div class="col-md-5 themed-grid-col">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="inputSeatsCountFrom">
+                        </div>
+                    </div>
+                    <div class="col-md-1 themed-grid-col">
+                        до
+                    </div>
+                    <div class="col-md-5 themed-grid-col">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="inputSeatsCountTo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 themed-grid-col">
+                <div class="pb-3">
+                    Является сетевым
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <select class="form-control" id="inputIsNetObj">
+                            <option selected></option>
+                            <option>Да</option>
+                            <option>Нет</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 themed-grid-col">
+                <div class="pb-3">
+                    Район
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <select id="inputDistrict" class="form-control">
+                            <option selected></option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-5 themed-grid-col">
+                <div class="pb-3">
+                    Дата создания
+                </div>
+                <div class="row">
+                    <div class="col-md-1 themed-grid-col">
+                        с
+                    </div>
+                    <div class="col-md-5 themed-grid-col">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="inputCreatedAtFrom" placeholder="дддд-мм-чч">
+                        </div>
+                    </div>
+                    <div class="col-md-1 themed-grid-col">
+                        по
+                    </div>
+                    <div class="col-md-5 themed-grid-col">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="inputCreatedAtTo" placeholder="дддд-мм-чч">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 themed-grid-col">
+                <div class="pb-3">
+                    Льготы
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <select class="form-control" id="inputSocialPrivileges">
+                            <option selected></option>
+                            <option>Есть</option>
+                            <option>Нет</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 themed-grid-col">
+                <div class="pb-3">
+                    Вид Объекта
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <select id="inputtypeObject" class="form-control">
+                            <option selected></option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="mb-4">
+    </form>
+          </div>
+    <div class="alert alert-success hide" role="alert">
+        Удаление прошло успешно!
+    </div>
+  
+
+    <div id="allRest" class="row card-group"></div>
+    <hr>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination pagination-sm justify-content-center" id="navigation"></ul>
+    </nav>
+</div>
+
+
+<div class="modal fade" id="createInformation" tabindex="-1" role="dialog" aria-labelledby="createInformation"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Редактирование записи</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label for="modal_name_4">Наименование</label>
+                            <input type="text" class="form-control" id="modal_name_4"
+                                   placeholder="Введите название..." required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label for="modal_isNetObject_4">Является сетевым</label>
+                            <div class="row" id="modal_isNetObject_4">
+                                <div class="col-12">
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" name="inlineRadioOptions4_1" id="modal_isNetObject_4_1"
+                                               value="option1">
+                                        <label class="form-check-label" for="modal_isNetObject_2_1">Да</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" name="inlineRadioOptions4_1" id="modal_isNetObject_4_2"
+                                               value="option2">
+                                        <label class="form-check-label" for="modal_isNetObject_2_2">Нет</label>
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label for="modal_operatingCompany_4">Название управляющей компании</label>
+                            <input type="text" class="form-control" id="modal_operatingCompany_4" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="modal_admArea_4">Административный округ</label>
+                            <select id="modal_admArea_4" class="form-control">
+                            </select>
+                        </div><!-- /.form-group col-md-12 -->
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="modal_district_4">Район</label>
+                            <select id="modal_district_4" class="form-control">
+                                <!--   									<option selected> </option> -->
+                                <!--   									<option>...</option> -->
+                            </select>
+                        </div><!-- /.form-group col-md-12 -->
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="modal_socialDiscount_4">Соц. скидка</label>
+                            <input type="text" class="form-control" id="modal_socialDiscount_4"
+                                   placeholder="Размер соц. скидки..." required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div><!-- /.form-group col-md-6 -->
+                        <div class="form-group col-md-6">
+                            <label for="modal_typeObject_4">Тип</label>
+                            <select id="modal_typeObject_4" class="form-control">
+                                <!-- 									<option selected> </option> -->
+                                <!-- 									<option></option> -->
+                            </select>
+                        </div><!-- /.form-group col-md-6 -->
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label for="modal_seatsCount_4">Число посадочных мест</label>
+                            <input type="text" class="form-control" id="modal_seatsCount_4" required>
+                        </div><!-- /.form-group col-md-4 -->
+                        <div class="form-group col-md-7">
+                            <label for="modal_publicPhone_4">Телефон</label>
+                            <input type="text" class="form-control" id="modal_publicPhone_4" required>
+                        </div><!-- /.form-group col-md-8 -->
+                    </div>
+                    <div class="form-row ">
+                        <label for="modal_address_4">Адрес заведения</label>
+                        <textarea class="form-control" id="modal_address_4" rows="3"
+                                  style="box-shadow: none;"></textarea>
+
+                    </div>
+                    <br>
+
+
+                    <!-- Для сэтов -->
+                    <div class="form-row" id="print_dishes_4">
+                        <div class="form-group col-md-6">
+                            <label for="modal_set_1_2">set_1</label>
+                            <input type="text" class="form-control" id="modal_set_1_4" required="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="modal_set_2_2">set_2</label>
+                            <input type="text" class="form-control" id="modal_set_2_4" required="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="modal_set_3_2">set_3</label>
+                            <input type="text" class="form-control" id="modal_set_3_4" required="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="modal_set_4_2">set_4</label>
+                            <input type="text" class="form-control" id="modal_set_4_4" required="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="modal_set_5_2">set_5</label>
+                            <input type="text" class="form-control" id="modal_set_5_4" required="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="modal_set_6_2">set_6</label>
+                            <input type="text" class="form-control" id="modal_set_6_4" required="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="modal_set_7_2">set_7</label>
+                            <input type="text" class="form-control" id="modal_set_7_4" required="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="modal_set_8_2">set_8</label>
+                            <input type="text" class="form-control" id="modal_set_8_4" required="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="modal_set_9_2">set_9</label>
+                            <input type="text" class="form-control" id="modal_set_9_4" required="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="modal_set_10_2">set_10</label>
+                            <input type="text" class="form-control" id="modal_set_10_4" required="">
+                        </div>
+                    </div>
+
+
+                    <div class="form-row">
+                        <div class="form-group col-md-7">
+                            <label for="modal_socialPrivileges_4">Показатель социальных льгот</label>
+                            <div class="row" id="modal_socialPrivileges_4">
+                                <div class="col-12">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions4_2"
+                                               id="modal_socialPrivileges_4_1" value="option1">
+                                        <label class="form-check-label" for="inlineRadio4">Есть</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions4_2"
+                                               id="modal_socialPrivileges_4_2" value="option2">
+                                        <label class="form-check-label" for="inlineRadio4">Нет</label>
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label for="modal_rate_4">Рейтинг</label>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-check form-check-inline">
+                                        <label for="modal_rate_4">
+                                            <svg class="bi bi-star-fill" width="1em" height="1em"
+                                                 viewBox="0 0 16 16" fill="currentColor"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                            </svg>
+                                        </label>
+
+                                        <input type="text" class="form-control form-control-sm" size="2"
+                                               id="modal_rate_4"
+                                               style=" border: 1px solid #6b6a6a; box-shadow: none;" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.form-group col-md-5 -->
+                    </div>
+                    <div class="form-row">
+                        <label for="modal_geogr_2">Географические координаты</label>
+                        <div class="row">
+                            <div class="form-group col-md-6" id="modal_geogr_4">
+                                <input type="text" class="form-control" id="modal_geogr_4_1" placeholder="Широта"
+                                       required>
+                            </div><!-- /.form-group col-md-6 -->
+                            <div class="form-group col-md-6">
+
+                                <input type="text" class="form-control" id="modal_geogr_4_2" placeholder="Долгота"
+                                       required>
+                            </div><!-- /.form-group col-md-6 -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <hr>
+                <div class="container themed-container">
+                    <div class="row mb-3">
+                        <div class="col-6 themed-grid-col" align="left">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
+                        </div>
+                        <div class="col-6 themed-grid-col" align="right">
+                            <button type="button" class="btn btn-info" id="create_button_modal_4"
+                                    onclick="createInfo()">Создать
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+          
+    </div>
+      
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+   <!-- <script src="jquery-3.5.1.slim.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>-->
+  </body>
+  </html>
