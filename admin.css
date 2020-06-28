@@ -1,0 +1,17 @@
+h1{
+    font-family: "Times New Roman";
+    text-align: center;
+    margin-top:40px;
+  }
+
+body{
+
+background: hsl(48, 100%, 93%);
+
+}
+ 
+  .container-fluid {
+    max-width: 960px;
+    font-family: "Times New Roman";
+    font-size: 20px;
+  }

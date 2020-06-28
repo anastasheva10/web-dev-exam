@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="C:\Users\Анастасия\Desktop\vproject\bootstrap-4.5.0-dist\bootstrap-4.5.0-dist\css\bootstrap.min.css"  >
+    <link href="C:\Users\Анастасия\Desktop\vproject\bootstrap-4.5.0-dist\bootstrap-4.5.0-dist\css\bootstrap.css" rel="stylesheet">
+   <!--<link rel="stylesheet" href="\bootstrap-4.5.0-dist\bootstrap-4.5.0-dist\css\bootstrap.min.css">
+     <link href="\bootstrap-4.5.0-dist\bootstrap-4.5.0-dist\css\bootstrap.css" rel="stylesheet">-->
+    <link rel="stylesheet" href= "index.css">
+    <script src="script.js"></script>
+       <title>Delivery</title>
+  </head>
+   
+  <body>
+      <!--Верхнее меню сайта-->
+    <header> 
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-dark" >
+        
+            <a class="navbar-brand" href="#"><img src="лог.jpg" width="50" height="50"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" >
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Оформить заказ</a>
+                  </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Подробнее
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Доставка</a>
+                    <a class="dropdown-item" href="#">Сотрудничество</a>
+                    <a class="dropdown-item" href="#">Контакты</a>
+                  </div>
+                </li>
+                
+              </ul>
+              <form class="form-inline mt-2 mt-md-0">
+                <a class="btn btn btn-outline-danger my-2 my-sm-0" href="admin.html" role="button">Admin &raquo;</a>
+              </form>
+            </div>
+          </nav>
+    </header>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+            <img id="k1" src="к1.jpg" ></svg>
+            <div class="carousel-caption">
+              <h1>Добро пожаловать в мир гастрономических удовольствий!</h1>
+              <p>Здесь Вы сможете найти блюда на любой вкус и удовлетворить все свои потребности</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"></svg>
+            <img id="k2" src="k2.jpg" ></svg>
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Мы занимаем I место по скорости доставки в Москве</h1>
+              <p>Вы не успеете проголадаться, как курьер будет ожидать Вас у дверей</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+            <img src="к3.jpg" ></svg>
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Вкус - наиболее важный аспект любого блюда, но эстетика не должна уступать</h1>
+              <p>Наши повара удивят Вас изысканной подачей блюд</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4">
+           <h2>Большой ассортимент</h2>
+           <div ><img src="бс.jpg" width="140" height="140" ></div>
+           <p>Все кухни мира собраны в одном месте.Здесь Вы сможете заказть блюдо на любой вкус.</p>
+          </div>
+          <div class="col-lg-4">
+            <h2>Доступные цены</h2>
+            <div><img src="дц.jpg" width="240" height="140" ></div>
+            <p>Абсолютно каждый сможет позволить себе сделать заказ в нашем online-ресторане.</p>
+          </div>
+          <div class="col-lg-4">
+            <h2>Круглосуточно</h2>
+            <div ><img src="кг.jpg" width="140" height="140"></div>
+            <p>Доставка осуществляется круглосуточно. Мы хотим, чтобы Вы были сыты всегда</p>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+      
+<h3>Оформление заказа</h3>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6 no-margin" >
+      <form>
+        <div id="action_form" >
+        <div class="form-row" style= "align-content: baseline;">
+          <div class="form-group col-4" style="margin:30px;" >
+            <label for="inputAdm">Административный округ</label>
+            <select class="form-control form-control"> <option selected>Choose...</option></select>
+           
+          </div>
+          <div class="form-group col-md-4" style="margin:30px;">
+            <label for="inputAddress">Район</label>
+            <select class="form-control form-control"> <option selected>Choose...</option></select>
+           
+          </div>
+        </div>
+        <div class="form-row">
+        <class class="form-group col-md-4" style="margin:30px;">
+          <label for="inputType">Тип заведения</label>
+          <select class="form-control form-control"> <option selected>Choose...</option></select>
+         
+        </class>
+          <div class="col-md-4" style="margin:30px;">
+            <label class="mr-sm-2" for="inlineFormCustomSelect">Предпочтения</label>
+            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <option selected>Choose...</option>
+            </select>
+          </div>
+       
+        </div>
+        <div class="form-row ">
+        
+          <div class="form-check col-3" style="margin:40px;">
+            <input class="form-check-input" type="checkbox" id="gridCheck1">
+            <label class="form-check-label" for="gridCheck1">
+              Социальная скидка
+            </label>
+          </div>
+          <div class="col-md-5" style="margin:40px;">
+            <div class="custom-control custom-checkbox mr-sm-2">
+              <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+              <label class="custom-control-label" for="customControlAutosizing">Запомнить мои предпочтения</label>
+            </div>
+          </div>
+        </div>    
+        <button type="button" class="btn btn-primary btn-lg btn-block" style="background:#4e0606;">Найти подходящее заведение</button>  
+       
+      </div>
+      </form>
+    </div>
+    <div class="col-lg-6 no-margin">
+
+      <div class="image"><img src="рес1.jpg" width=100% height=100% ></div>
+    </div>
+  </div>
+</div>
+
+<hr>
+<h3>Меню</h3>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card" style="width: 18rem;" style="padding-bottom:50px;">
+        <img src="м1.jpg" class="card-img-top" >
+        <div class="card-body">
+          <h5 class="card-title">Курица запечённая с апельсинами</h5>
+          <p class="card-text"> Курица в апельсиново-медовом маринаде, запечённая в духовке</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card" style="width: 18rem;" >
+        <img src="m2.jpg" class="card-img-top" >
+        <div class="card-body">
+          <h5 class="card-title">Салат "Цезарь"</h5>
+          <p class="card-text">С куриной грудкой обжаренной на гриле</p>
+        </div>
+      </div>
+    </div>  
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;" >
+        <img src="m3.jpg" class="card-img-top" >
+        <div class="card-body">
+          <h5 class="card-title">Хинкали</h5>
+          <p class="card-text">Хинкали с фаршем из свиньи и говядины, с добавлением зелени и специй</p>
+          <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card" style="width: 18rem;">
+        <img src="m4.jpg" class="card-img-top" >
+        <div class="card-body">
+          <h5 class="card-title">Сырники творожные</h5>
+          <p class="card-text">Подаются со свежими ягодами, клубничным муссом и сметаной.</p>
+          <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card" style="width: 18rem;" >
+        <img src="m5.jpg" class="card-img-top" >
+        <div class="card-body">
+          <h5 class="card-title">Фунчоза с овощами и курицей</h5>
+          <p class="card-text">Обжаренные кусочки курицы с китайской лапшой, овощами и шампиньонами с добавлением восточных специй.</p>
+          <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+        </div>
+      </div>
+    </div>  
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;" >
+        <img src="m6.jpg" class="card-img-top" >
+        <div class="card-body">
+          <h5 class="card-title">Овощи на гриле</h5>
+          <p class="card-text">Обжаренные овощи, с добавлением специй.</p>
+          <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card" style="width: 18rem;" >
+        <img src="m7.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Морское ассорти</h5>
+          <p class="card-text">Подается с имбирным соусом, тигровыми креветками, мидиями, грешками, кальмаром и семгой.</p>
+          <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card" style="width: 18rem;" >
+        <img src="m8.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Омлет с томатами</h5>
+          <p class="card-text">Воздушный омлет на сливках, подается с тостовым хлебом.</p>
+          <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+        </div>
+      </div>
+    </div>  
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;" >
+        <img src="m9.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Борщ с телятиной</h5>
+          <p class="card-text">Подается с чипсами из бородинского хлеба,перцем чили и сметаной.</p>
+          <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <hr>
+     <h3>Дополнительные опции заказа</h3>    
+
+     <div class="container-fluid">
+      <div class="row">
+        <div class="col-8 no-margin">
+          <div class="image1"><img src="рес2.jpg" width=100% height=100%></div>
+        </div>
+        <div class="col-4">
+          <h2>К заказу можно применить только 2 дополнительные опции</h2>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between">
+               <div>
+                <h4 class="my-0">Социальная скидка</h4>
+                <small class="text-muted">Предоставляется заведением</small>
+                  </div>
+                  <span class="text-muted"><input type="checkbox" class="form-check-input" id="exampleCheck1"></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between ">
+              <div>
+                <h4 class="my-0" style="margin:130px;">Быстрая доставка</h4>
+                <small class="text-muted">Цена увеличивается на 20%</small>
+                  </div>
+                  <span class="text-muted"><input type="checkbox" class="form-check-input" id="exampleCheck1"></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between ">
+              <div>
+                <h4 class="my-0" style="margin:100px;">Бесконтактная доставка</h4>
+                <small class="text-muted">
+                  В связи с COVID-19 бесконтактная доставка осуществляется во всех заведениях совершенно бесплатно.
+                </small>
+              </div>
+                  <span class="text-muted"><input type="checkbox" class="form-check-input" id="exampleCheck1"></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between ">
+              <div>
+               <h4 class="my-0" style="margin:150px;">Хочу подарок</h4>
+               <small class="text-muted" > В заказ добавляется случайный сет. </small>
+                 </div>
+                 <span class="text-muted"><input type="checkbox" class="form-check-input" id="exampleCheck1"></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between ">
+              <div>
+                <h4 class="my-0">В два раза больше</h4>
+                <small class="text-muted"> Количество всех заказанных сетов увеличивается в 2 раза. Цена увеличивается на 60%</small>
+               </div>
+               <span class="text-muted"><input type="checkbox" class="form-check-input" id="exampleCheck1"></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                    <h4 class="my-0">На компанию</h4>
+                    <small class="text-muted"> Количество всех заказанных сетов увеличивается в 5 раз. Цена увеличивается в в 2.5 раза.</small>
+                </div>
+                 <span class="text-muted"><input type="checkbox" class="form-check-input" id="exampleCheck1"></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between ">
+                <div>
+                   <h4 class="my-0">Только горячим</h4>
+                   <small class="text-muted">Если заказ будет холодным, то цена снизится на 30% от финальной цены с учетом других опций с указанием цены со скидкой.</small>
+                </div>
+                <span class="text-muted"><input type="checkbox" class="form-check-input" id="exampleCheck1"></span>
+             </li>
+          </ul>
+        </div>    
+      </div>
+    </div>
+
+
+
+<!-- /.container marketing -->
+<div class="container-fluid" style="margin:10px;">
+  <div class="row">
+    <div class="col-md-8 ">
+      </div>
+    <div class="col-md-4 ">
+      <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target=".bd-example-modal-lg" id="modal_window" style="background:#4e0606;">Оформить заказ</button><hr>
+      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div  class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title" id="exampleModalLabel" style="font-weight:bold">Оформление заказа</h2>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+              <div class="modal-body">
+                <h7 style="font-weight:bold">Выбранные позиции</h7>
+                <p id="modal_positions">	
+<!--
+                  This
+                  <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">
+                    button
+                  </a> 
+                  triggers a popover on click.
+-->
+
+                </p>
+                <hr>
+                <h7 style="font-weight:bold">Дополнительные опции</h7>
+                <p id="choosed">	
+<!--
+                  This
+                  <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">
+                    button
+                  </a> 
+                  triggers a popover on click.
+-->
+                </p>
+                <hr>
+                <h5 style="font-weight:bold">Информация о предприятии</h5>
+                <p id="choosed">	
+<!--
+                  This
+                  <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">
+                    button
+                  </a> 
+                  triggers a popover on click.
+                -->
+              <div class="container themed-container">
+                <div class="row mb-3">
+                  <div class="col-6 themed-grid-col">Название</div>
+                  <div class="col-6 themed-grid-col" id="modal_name"></div>
+                  
+                  </div>
+                  <div class="row mb-3">
+                  <div class="col-6 themed-grid-col">Административный округ</div>
+                  <div class="col-6 themed-grid-col" id="modal_admArea"></div>
+                  
+                  </div>
+                  <div class="row mb-3">
+                  <div class="col-6 themed-grid-col">Район</div>
+                  <div class="col-6 themed-grid-col" id="modal_district"></div>
+                  
+                  </div>
+                  <div class="row mb-3">
+                  <div class="col-6 themed-grid-col">Адрес</div>
+                  <div class="col-6 themed-grid-col" id="modal_address"><small class="text-muted"></small></div>
+                  
+                  </div>
+                  <div class="row mb-3">
+                  <div class="col-6 themed-grid-col">Рейтинг</div>
+                  <div class="col-6 themed-grid-col" id="modal_rate"></div>
+                  
+                  </div>
+              </div>
+                </p>
+                <hr>
+                
+                <h5 style="font-weight:bold">Доставка</h5>
+                <p id="choosed">	
+<!--
+                  This
+                  <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">
+                    button
+                  </a> 
+                  triggers a popover on click.
+                -->
+
+              <div class="container themed-container">
+                <div class="row mb-3">
+                  <div class="col-6 themed-grid-col">Зона Доставки:</div>
+                  <div class="col-6 themed-grid-col">
+                    <select class="form-control" style=" border: 1px solid #6b6a6a; box-shadow: none;">
+                      <option selected>Выберите зону</option>
+                      <option>Первая зона</option>
+                      <option>Вторая зона</option>
+                    </select>
+                 </div>
+                </div>
+
+                  <div class="row mb-3">
+                    <div class="col-6 themed-grid-col">Адрес Доствки</div>
+                    <div class="col-6 themed-grid-col"><textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style=" border: 1px solid #6b6a6a; box-shadow: none;"></textarea></div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="col-6 themed-grid-col">Стоимость доставки</div>
+                    <div class="col-6 themed-grid-col">300 руб.</div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="col-6 themed-grid-col">ФИО получателя</div>
+                    <div class="col-6 themed-grid-col"><input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" size="2" style=" border: 1px solid #6b6a6a; box-shadow: none;" placeholder="Введите ФИО..."></div>
+                  </div>
+              </div>
+               </p>
+               <hr>
+
+
+              </div>
+          
+    <hr>
+								<div class="container themed-container">
+								<div class="row mb-3">
+											<div class="col-3 themed-grid-col" align="left">
+										    <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
+											</div>
+											
+											<div class="col-6 themed-grid-col" name="itog" align="center"></div>
+											<div class="col-3 themed-grid-col" align="right">
+												<button type="button" class="btn btn-success" style="background:#4e0606;">Оплатить</button>
+											</div>
+  								</div>
+                </div>
+                
+
+
+              </div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-md-7 order-md-1" name="itog">
+					
+					
+				</div>	
+			</div>
+		
+
+
+
+
+
+
+
+
+    
+      <div class="container">
+        <section style="height:80px;"></section>
+        <div class="row" style="text-align:center;">
+        <!----------- Footer ------------>
+        <footer class="footer-bs">
+        <div class="row">
+        <div class="col-md-3 footer-brand animated fadeInLeft">
+        <h6>Delivery</h6>
+        <div class="image_2"><img src="лог.jpg" width=100% height=100%></div>
+        </div>
+        <div class="col-md-4 footer-nav animated fadeInUp">
+          <h6>О сайте</h6>
+        Доставка еды – это очень удобная, своевременная и достаточно быстрая услуга. Получить свой обед очень просто – нужно поднять трубку телефона или зайти на сайт сервиса, и заказать его домой или в офис.
+        </div>
+         
+        <div class="col-md-2 footer-social animated fadeInDown">
+        <h6>Follow Us</h6>
+        <ul>
+        <li><a href="https://vk.com/kobra_black">VK</a></li>
+        <li><a href="https://www.instagram.com/_anastassss/">Instagram</a></li>
+        <li><a href="mailto:anastasheva10@yandex.ru">E-mail</a></li>
+        </ul>
+        </div>
+        <div class="col-md-3 footer-ns animated fadeInRight">
+          <h6>Будем рады видеть Вас снова!</h6>
+          <div class="image_2"><img src="f1.jpg" width=100% height=100%></div>
+        </div>
+        </div>
+        </footer>
+        <section style="text-align:center; margin:10px auto;"><p>Designed by <a href="/">Malysheva Anastasia</a> <p>© 2020, All rights reserved</p></p></section>
+      
+      </div>
+      
+   
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
