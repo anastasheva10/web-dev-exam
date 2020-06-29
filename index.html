@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="C:\Users\Анастасия\Desktop\webdev-exam-2020-05166\bootstrap-4.5.0-dist\bootstrap-4.5.0-dist\css\bootstrap.min.css"  >
-    <link href="C:\Users\Анастасия\Desktop\webdev-exam-2020-05166\bootstrap-4.5.0-dist\bootstrap-4.5.0-dist\css\bootstrap.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="\bootstrap-4.5.0-dist\bootstrap-4.5.0-dist\css\bootstrap.min.css">
-     <link href="\bootstrap-4.5.0-dist\bootstrap-4.5.0-dist\css\bootstrap.css" rel="stylesheet">-->
+    <!--<link rel="stylesheet" href="C:\Users\Анастасия\Desktop\webdev-exam-2020-05166\bootstrap-4.5.0-dist\bootstrap-4.5.0-dist\css\bootstrap.min.css"  >
+    <link href="C:\Users\Анастасия\Desktop\webdev-exam-2020-05166\bootstrap-4.5.0-dist\bootstrap-4.5.0-dist\css\bootstrap.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="\bootstrap-4.5.0-dist\bootstrap-4.5.0-dist\css\bootstrap.min.css">
+     <link href="\bootstrap-4.5.0-dist\bootstrap-4.5.0-dist\css\bootstrap.css" rel="stylesheet">
     <!--<link rel="stylesheet" href="bootstrap.min.css">-->
     <link rel="stylesheet" href="index.css">
     <script src="script.js"></script>
@@ -124,9 +124,10 @@
     </div>
     <hr>
     <h3>Оформление заказа</h3>
-    <div class="container-fluid">
+    <div class="container" style="border:10">
+   
         <div class="row">
-            <div class="col-lg-6 margin-left">
+            <div class="col-md-6 no-margin">
                 <form>
                     <div id="action_form">
                         <div class="form-row" style="align-content: baseline;">
@@ -136,10 +137,10 @@
                                     <option selected>любой</option>
                                 </select>
                             </div>
-                            <div class="form-group col-md-4" style="margin:30px;">
+                            <div class="form-group col-md-4" style="margin:55px;">
                                 <label for="inputDistrict">Район</label>
                                 <select id="inputDistrict" class="form-control form-control">
-                                    <option selected>любой</option>
+                                    <option selected>Любой</option>
                                 </select>
                             </div>
                         </div>
@@ -147,7 +148,7 @@
                             <class class="form-group col-md-4" style="margin:30px;">
                                 <label for="inputTypeObject">Тип заведения</label>
                                 <select id="inputTypeObject" class="form-control form-control">
-                                    <option selected>любой</option>
+                                    <option selected>Любой</option>
                                 </select>
 
                             </class>
@@ -164,8 +165,8 @@
                     </div>
                 </form>
             </div>
-            <div class="col-lg-5 no-margin p-0">
-                <img src="рес1.jpg" style="height:320px"  width=100%>
+            <div class="col-md-6 no-margin p-0">
+                <img src="рес1.jpg" style="height:370px;  width:550px">
             </div>
         </div>
     </div>
@@ -188,9 +189,10 @@
 
         <div class="row">
             <div class="col-lg-8 col-md-6 col-sm-12 no-margin">
-                <img src="рес2.jpg" width=100% style="height:480px" >
+                <img src="рес2.jpg" style="height:480px;  width:700px" >
+                
                 <hr>
-                <img src="п1.jpg" style="height:340px"  width=100%>
+                <img src="п1.jpg" style="height:340px;  width:700px" >
                 <hr>
                 <div class="w-100" id="allPrice"></div>
             </div>
